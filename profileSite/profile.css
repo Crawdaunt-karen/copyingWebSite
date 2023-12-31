@@ -1,63 +1,13 @@
-.mainHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 4%;
-}
-
-.mainHeader .site-title {
-  flex: 2;
-  padding: 10px 0;
-}
-.mainHeader nav {
-  flex: 1;
-}
-
-.site-title img {
-  height: 40px;
-  width: 120px;
-}
-
-.mainvisual img {
-  width: 100%;
-  max-width: 1920px;
-  height: 600px;
-  object-fit: cover;
-  margin-bottom: 80px;
-}
-
-nav ul {
-  display: flex;
-  justify-content: flex-end;
+@charset "UTF-8";
+/* グローバルスタイル */
+ul {
   list-style: none;
   padding: 10px 0;
 }
 
-nav li {
-  margin-right: 10px;
-}
-
-nav a {
-  text-decoration: none;
-  color: black;
-}
-nav a:visited {
-  color: inherit;
-}
-nav a:hover {
-  color: lightgrey;
-}
-
-.mainArea {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.about {
-  padding: 0 4%;
-  margin: 0 auto 100px auto;
+img {
+  width: 100%;
+  object-fit: cover;
 }
 
 h2 {
@@ -72,9 +22,76 @@ h3 {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  color: lightgrey;
+}
+
+/* ヘッダー */
+.mainHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+}
+
+.site-title {
+  flex: 2;
+  line-height: 1px;
+  padding: 10px 0;
+}
+
+.site-title img {
+  height: 40px;
+  width: 120px;
+}
+
+.mainHeader nav {
+  flex: 1;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav li:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* メインビジュアル */
+.mainvisual img {
+  max-width: 1920px;
+  height: 600px;
+  margin-bottom: 80px;
+}
+
+/* メインエリア */
+.mainArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Aboutセクション */
+.about,
+.favFurniture {
+  padding: 0 4%;
+  margin: 0 auto 100px auto;
+}
+
 .aboutContent {
   display: grid;
-  grid-template-columns: repeat(100px, 1fr);
+  grid-template-columns: repeat(100px 1fr);
 }
 
 .about img {
@@ -84,22 +101,18 @@ h3 {
   margin-right: 30px;
   grid-column: 1;
 }
-
 .aboutText {
   grid-column: 2;
-}
-
-.favFurniture {
-  padding: 0 4%;
-  margin: 0 auto 100px auto;
 }
 
 .favFurniture ul {
   display: flex;
   justify-content: space-between;
-  list-style: none;
-  padding: 10px 0;
   gap: 20px;
+}
+
+.favFurniture li {
+  flex: 1;
 }
 
 .favFurniture img {
@@ -107,6 +120,8 @@ h3 {
   height: 180px;
 }
 
-.favFurniture p {
-  text-align: center;
+@media screen and (max-width: 668px) {
+  .favFurniture ul {
+    flex-direction: column;
+  }
 }
