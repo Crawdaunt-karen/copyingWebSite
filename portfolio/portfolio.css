@@ -96,6 +96,8 @@ nav li:not(:last-child) {
   padding: 15px;
   border-bottom: 1px solid lightgray;
 }
+
+/* contact */
 .contact dl {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -131,4 +133,20 @@ nav li:not(:last-child) {
   background-color: black;
   color: white;
   padding: 15px 0;
+}
+
+@media screen and (max-width: 670px) {
+  .mainHeader {
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .works ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .works li img {
+    max-width: 100%;
+  }
 }
