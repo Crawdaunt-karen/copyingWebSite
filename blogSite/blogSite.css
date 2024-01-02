@@ -1,0 +1,188 @@
+/* 全体に適用するスタイル  */
+body {
+  color: black;
+  font-size: 1rem;
+}
+li {
+  list-style: none;
+}
+.wrapper {
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+/* header */
+.headerNavi .headerNaviList {
+  display: flex;
+  align-items: center;
+  background-color: black;
+}
+
+.headerNaviList li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.headerNaviList li {
+  font-size: 0.875rem;
+  padding: 10px 60px 10px 0;
+}
+
+.headerNaviList li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* pickup */
+.pickup {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  margin-bottom: 60px;
+}
+.pickup article {
+  width: 32%;
+}
+.pickup img {
+  width: 342px;
+  height: 192px;
+}
+.pickup .article-title {
+  font-size: 1rem;
+  margin: 10px 0 50px 0;
+}
+
+/* readmore用 */
+.readmore {
+  text-align: center;
+}
+.readmore a {
+  color: black;
+  font-size: 0.875rem;
+  padding-bottom: 1px;
+}
+
+/* container */
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.blackLinkNoDecorate {
+  color: black;
+  text-decoration: none;
+}
+
+.forte {
+  display: block;
+  width: 120px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+}
+
+.article-title {
+  margin: 10px 0 15px;
+}
+
+main {
+  width: 65%;
+}
+
+main ul {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+
+main ul li:not(:last-child) {
+  margin-right: 10px;
+}
+
+main article {
+  margin-bottom: 80px;
+}
+
+main article img {
+  display: block;
+  width: 485px;
+  height: 273px;
+  margin: auto;
+}
+
+main .text {
+  padding: 10px 40px 30px 40px;
+}
+
+/* sidebar */
+.sidebar {
+  width: 33%;
+  padding: 20px;
+}
+
+.side-title {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* sidebar-author */
+.author {
+  margin-bottom: 60px;
+}
+
+/* sidebar-ranking */
+.ranking h4 {
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+/* sidebar-archive */
+
+.archive ul {
+  border-bottom: solid 1px lightgray;
+}
+.archive li {
+  font-size: 0.875rem;
+  border-top: solid 1px lightgray;
+  padding: 20px;
+}
+
+/* footer */
+.footer {
+  background-color: #f7f7f7;
+  font-size: 0.875rem;
+}
+.footer-title {
+  margin-bottom: 30px;
+}
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  column-gap: 30px;
+}
+.item {
+  flex: 1;
+}
+
+/* about */
+.about-list {
+  margin: 20px 0;
+}
+/* menu */
+.menu-list {
+  border-bottom: solid 1px lightgray;
+}
+
+.menu-list li {
+  font-size: 0.875rem;
+  border-top: solid 1px lightgray;
+  padding: 20px;
+}
+
+/* copyright */
+.copyright {
+  text-align: center;
+}

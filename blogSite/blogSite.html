@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&amp;family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="blogSite.css" />
     <script
       charset="utf-8"
       src="https://platform.twitter.com/js/timeline.e108540dddc96e4b707f5cf259a582d7.js"
@@ -26,8 +26,8 @@
       <h1 class="site-title wrapper">
         <a href="#"><img src="img/logo.svg" alt="Travel Blog" /></a>
       </h1>
-      <nav id="navi">
-        <ul class="wrapper">
+      <nav class="headerNavi">
+        <ul class="headerNaviList wrapper">
           <li><a href="#">NEW</a></li>
           <li><a href="#">COLUMN</a></li>
           <li><a href="#">SERIES</a></li>
@@ -37,9 +37,9 @@
       </nav>
     </header>
 
-    <div id="pickup" class="wrapper">
+    <div class="pickup wrapper">
       <article>
-        <img src="img/pickup1.jpg" alt="テキストテキストテキスト" />
+        <img src="img/travel1.jpeg" alt="テキストテキストテキスト" />
         <h2 class="article-title">
           タイトルテキストテキストテキストテキストテキストテキストテキスト
         </h2>
@@ -47,7 +47,7 @@
       </article>
 
       <article>
-        <img src="img/pickup2.jpg" alt="テキストテキストテキスト" />
+        <img src="img/germeny.jpeg" alt="テキストテキストテキスト" />
         <h2 class="article-title">
           タイトルテキストテキストテキストテキストテキストテキストテキスト
         </h2>
@@ -55,7 +55,7 @@
       </article>
 
       <article>
-        <img src="img/pickup3.jpg" alt="テキストテキストテキスト" />
+        <img src="img/austria.jpeg" alt="テキストテキストテキスト" />
         <h2 class="article-title">
           タイトルテキストテキストテキストテキストテキストテキストテキスト
         </h2>
@@ -63,18 +63,20 @@
       </article>
     </div>
 
-    <div id="container" class="wrapper">
+    <div class="container wrapper">
       <main>
         <article>
           <h2 class="article-title">
-            <a href="#">タイトルテキストテキストテキストテキストテキスト</a>
+            <a class="blackLinkNoDecorate" href="#"
+              >タイトルテキストテキストテキストテキストテキスト</a
+            >
           </h2>
           <ul class="meta">
-            <li><a href="#">2020/01/01</a></li>
-            <li><a href="#">カテゴリ1</a></li>
+            <li><a class="blackLinkNoDecorate" href="#">2020/01/01</a></li>
+            <li><a class="blackLinkNoDecorate" href="#">カテゴリ1</a></li>
           </ul>
           <a href="#"
-            ><img src="img/main1.jpg" alt="テキストテキストテキスト"
+            ><img src="img/florida.jpeg" alt="テキストテキストテキスト"
           /></a>
           <p class="text">
             本文テキストテキストテキストテキストテキストテキストテキストテキスト
@@ -86,14 +88,16 @@
 
         <article>
           <h2 class="article-title">
-            <a href="#">タイトルテキストテキストテキストテキストテキスト</a>
+            <a class="blackLinkNoDecorate" href="#"
+              >タイトルテキストテキストテキストテキストテキスト</a
+            >
           </h2>
           <ul class="meta">
-            <li><a href="#">2020/01/01</a></li>
-            <li><a href="#">カテゴリ1</a></li>
+            <li><a class="blackLinkNoDecorate" href="#">2020/01/01</a></li>
+            <li><a class="blackLinkNoDecorate" href="#">カテゴリ1</a></li>
           </ul>
           <a href="#"
-            ><img src="img/main2.jpg" alt="テキストテキストテキスト"
+            ><img src="img/russia.jpeg" alt="テキストテキストテキスト"
           /></a>
           <p class="text">
             本文テキストテキストテキストテキストテキストテキストテキストテキスト
@@ -105,14 +109,16 @@
 
         <article>
           <h2 class="article-title">
-            <a href="#">タイトルテキストテキストテキストテキストテキスト</a>
+            <a class="blackLinkNoDecorate" href="#"
+              >タイトルテキストテキストテキストテキストテキスト</a
+            >
           </h2>
           <ul class="meta">
-            <li><a href="#">2020/01/01</a></li>
-            <li><a href="#">カテゴリ1</a></li>
+            <li><a class="blackLinkNoDecorate" href="#">2020/01/01</a></li>
+            <li><a class="blackLinkNoDecorate" href="#">カテゴリ1</a></li>
           </ul>
           <a href="#"
-            ><img src="img/main3.jpg" alt="テキストテキストテキスト"
+            ><img src="img/monglia.jpeg" alt="テキストテキストテキスト"
           /></a>
           <p class="text">
             本文テキストテキストテキストテキストテキストテキストテキストテキスト
@@ -123,9 +129,13 @@
         </article>
       </main>
 
-      <aside id="sidebar">
+      <aside class="sidebar">
         <section class="author">
-          <img src="img/author.jpg" alt="テキストテキストテキスト" />
+          <img
+            class="forte"
+            src="img/image_6487327.JPG"
+            alt="テキストテキストテキスト"
+          />
           <h3 class="side-title">Name Name</h3>
           <p class="profile">
             プロフィールテキストテキストテキストテキストテキストテキストテキスト
@@ -137,8 +147,8 @@
         <section class="ranking">
           <h3 class="side-title">Ranking</h3>
           <article>
-            <a href="#">
-              <img src="img/ranking1.jpg" alt="テキストテキストテキスト" />
+            <a class="blackLinkNoDecorate" href="#">
+              <img src="img/greek.jpeg" alt="テキストテキストテキスト" />
               <h4 class="article-title">
                 タイトルテキストテキストテキストテキストテキストテキスト
               </h4>
@@ -146,8 +156,8 @@
           </article>
 
           <article>
-            <a href="#">
-              <img src="img/ranking2.jpg" alt="テキストテキストテキスト" />
+            <a class="blackLinkNoDecorate" href="#">
+              <img src="img/uk.jpeg" alt="テキストテキストテキスト" />
               <h4 class="article-title">
                 タイトルテキストテキストテキストテキストテキストテキスト
               </h4>
@@ -155,8 +165,8 @@
           </article>
 
           <article>
-            <a href="#">
-              <img src="img/ranking3.jpg" alt="テキストテキストテキスト" />
+            <a class="blackLinkNoDecorate" href="#">
+              <img src="img/newzeland.jpeg" alt="テキストテキストテキスト" />
               <h4 class="article-title">
                 タイトルテキストテキストテキストテキストテキストテキスト
               </h4>
@@ -167,28 +177,28 @@
         <section class="archive">
           <h3 class="side-title">Archive</h3>
           <ul>
-            <li><a href="#">XXXX年XX月</a>(XX)</li>
-            <li><a href="#">XXXX年XX月</a>(XX)</li>
-            <li><a href="#">XXXX年XX月</a>(XX)</li>
-            <li><a href="#">XXXX年XX月</a>(XX)</li>
-            <li><a href="#">XXXX年XX月</a>(XX)</li>
-            <li><a href="#">XXXX年XX月</a>(XX)</li>
-            <li><a href="#">XXXX年XX月</a>(XX)</li>
-            <li><a href="#">XXXX年XX月</a>(XX)</li>
-            <li><a href="#">XXXX年XX月</a>(XX)</li>
-            <li><a href="#">XXXX年XX月</a>(XX)</li>
-            <li><a href="#">XXXX年XX月</a>(XX)</li>
-            <li><a href="#">XXXX年XX月</a>(XX)</li>
-            <li><a href="#">XXXX年XX月</a>(XX)</li>
-            <li><a href="#">XXXX年XX月</a>(XX)</li>
-            <li><a href="#">XXXX年XX月</a>(XX)</li>
+            <li><a class="blackLinkNoDecorate" href="#">XXXX年XX月</a>(XX)</li>
+            <li><a class="blackLinkNoDecorate" href="#">XXXX年XX月</a>(XX)</li>
+            <li><a class="blackLinkNoDecorate" href="#">XXXX年XX月</a>(XX)</li>
+            <li><a class="blackLinkNoDecorate" href="#">XXXX年XX月</a>(XX)</li>
+            <li><a class="blackLinkNoDecorate" href="#">XXXX年XX月</a>(XX)</li>
+            <li><a class="blackLinkNoDecorate" href="#">XXXX年XX月</a>(XX)</li>
+            <li><a class="blackLinkNoDecorate" href="#">XXXX年XX月</a>(XX)</li>
+            <li><a class="blackLinkNoDecorate" href="#">XXXX年XX月</a>(XX)</li>
+            <li><a class="blackLinkNoDecorate" href="#">XXXX年XX月</a>(XX)</li>
+            <li><a class="blackLinkNoDecorate" href="#">XXXX年XX月</a>(XX)</li>
+            <li><a class="blackLinkNoDecorate" href="#">XXXX年XX月</a>(XX)</li>
+            <li><a class="blackLinkNoDecorate" href="#">XXXX年XX月</a>(XX)</li>
+            <li><a class="blackLinkNoDecorate" href="#">XXXX年XX月</a>(XX)</li>
+            <li><a class="blackLinkNoDecorate" href="#">XXXX年XX月</a>(XX)</li>
+            <li><a class="blackLinkNoDecorate" href="#">XXXX年XX月</a>(XX)</li>
           </ul>
         </section>
       </aside>
     </div>
 
-    <footer id="footer">
-      <div class="content wrapper">
+    <footer class="footer">
+      <div class="footerContent wrapper">
         <section class="item">
           <h3 class="footer-title">About</h3>
           <p>
@@ -197,27 +207,33 @@
             テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
           </p>
           <ul class="about-list">
-            <li><a href="#" class="arrow">プロフィール詳細</a></li>
-            <li><a href="#" class="arrow">お仕事の依頼</a></li>
-            <li><a href="#" class="arrow">お問い合わせ</a></li>
+            <li>
+              <a href="#" class="arrow blackLinkNoDecorate">プロフィール詳細</a>
+            </li>
+            <li>
+              <a href="#" class="arrow blackLinkNoDecorate">お仕事の依頼</a>
+            </li>
+            <li>
+              <a href="#" class="arrow blackLinkNoDecorate">お問い合わせ</a>
+            </li>
           </ul>
         </section>
 
         <section class="item">
           <h3 class="footer-title">Menu</h3>
           <ul class="menu-list">
-            <li><a href="#">NEW</a></li>
-            <li><a href="#">CATEGORY</a></li>
-            <li><a href="#">COLUMN</a></li>
-            <li><a href="#">SERIES</a></li>
-            <li><a href="#">Q&amp;A</a></li>
+            <li><a class="blackLinkNoDecorate" href="#">NEW</a></li>
+            <li><a class="blackLinkNoDecorate" href="#">CATEGORY</a></li>
+            <li><a class="blackLinkNoDecorate" href="#">COLUMN</a></li>
+            <li><a class="blackLinkNoDecorate" href="#">SERIES</a></li>
+            <li><a class="blackLinkNoDecorate" href="#">Q&amp;A</a></li>
           </ul>
         </section>
 
         <section class="item">
           <h3 class="footer-title">Twitter</h3>
           <a
-            class="twitter-timeline"
+            class="twitter-timeline blackLinkNoDecorate"
             data-height="315"
             href="https://twitter.com/TwitterJP?ref_src=twsrc%5Etfw"
             data-twitter-extracted-i1704089172337665015="true"
