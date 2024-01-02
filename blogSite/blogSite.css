@@ -50,6 +50,7 @@ li {
 .pickup .article-title {
   font-size: 1rem;
   margin: 10px 0 50px 0;
+  text-align: center;
 }
 
 /* readmore用 */
@@ -185,4 +186,44 @@ main .text {
 /* copyright */
 .copyright {
   text-align: center;
+}
+
+/* SP版 */
+@media screen and (max-width: 670px) {
+  header {
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+  }
+  /* pickup */
+  .pickup {
+    flex-direction: column;
+    padding-top: 140px;
+  }
+  .pickup article {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  /* container */
+  .container {
+    flex-direction: column;
+  }
+
+  /* main */
+  main {
+    width: 100%;
+  }
+  main article img {
+    width: 342px;
+    height: 192px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .footerContent {
+    flex-direction: column;
+  }
 }
