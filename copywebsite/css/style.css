@@ -1,0 +1,255 @@
+/* 共通のクラス */
+body {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+/* リンクの文字白、下線なし */
+.whiteNoDeco {
+  color: white;
+  text-decoration: none;
+}
+
+/* 各要素のクラスここから */
+/* headerを横一列に並べる */
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 40px;
+  position: fixed;
+  z-index: 20;
+  background-color: white;
+}
+
+/* ハンバーガーメニューのトグルボタン */
+.toggle_btn {
+  display: block;
+  cursor: pointer;
+  position: fixed;
+  z-index: 30;
+  top: 25px;
+  right: 45px;
+  width: 30px;
+  height: 30px;
+}
+/* ハンバーガーメニューバーの三本線 */
+.toggle_btn span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  left: 0;
+  border: 4px;
+  transition: ease 0.4s;
+}
+
+.toggle_btn span:nth-child(1) {
+  top: 4px;
+}
+.toggle_btn span:nth-child(2) {
+  top: 14px;
+}
+.toggle_btn span:nth-child(3) {
+  bottom: 4px;
+}
+
+/* nav要素のスタイル */
+.headerNavi {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 200px;
+  height: 100%;
+  background: black;
+  transition: left 0.5s;
+  z-index: 100;
+  color: white;
+  padding: 60px 25px;
+}
+
+.headerNavi .nav-menu {
+  margin-bottom: 60px;
+  border-top: solid 1px white;
+}
+
+.headerNavi .nav-menu li {
+  padding: 20px 0;
+  border-bottom: solid 1px white;
+}
+
+/* ナビゲーションがアクティブ(表示)の時のスタイル */
+.headerNavi.active {
+  left: 0; /* クリック時に画面内にスライドイン */
+  opacity: 1;
+}
+
+/* ハンバーガーメニューがアクティブの時のトグルボタンのスタイル変更 */
+.toggle_btn.active span {
+  background-color: white;
+}
+
+.toggle_btn.active span:nth-child(1) {
+  transform: translateY(10px) rotate(-315deg);
+}
+
+.toggle_btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.toggle_btn.active span:nth-child(3) {
+  transform: translateY(-10px) rotate(315deg);
+}
+
+/* sns用ナビ */
+.nav-sns li {
+  padding: 5px 0;
+}
+
+/* マスク */
+.mask {
+  display: none; /* 最初は非表示 */
+}
+
+/* マスクがアクティブ(表示)のとき */
+.mask.active {
+  display: block; /* 表示 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* main */
+
+.bg-video {
+  width: 100%;
+  max-height: 960px;
+  object-fit: cover;
+}
+
+.sec-title {
+  font-size: 2.25rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* pickup */
+.pickup {
+  width: 100%;
+  padding: 100px 0 50px 0;
+}
+
+/* pickupのスライダー */
+.pickup-slider {
+  width: 100%;
+  display: flex;
+  max-width: 80%;
+  margin: auto;
+}
+
+.pickup-slider li {
+  padding: 0 30px;
+}
+
+.pickup-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* feature */
+.feature {
+  max-width: 1240px;
+  padding: 100px 16px 50px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.grid .item {
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px 4px #ccc;
+}
+
+.grid .item .item-content {
+  padding: 30px;
+}
+
+.item-cat {
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+}
+
+.item-text {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.item-date {
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+/* contact */
+.contact {
+  color: white;
+  background-color: black;
+  padding: 50px 0;
+}
+
+.content {
+  display: flex;
+  max-width: 1240px;
+  padding: 0 15px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.contact-info,
+.contact-form {
+  width: 45%;
+}
+.contact-info p {
+  margin-bottom: 30px;
+}
+
+.userControl {
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.button input {
+  width: 200px;
+  color: white;
+  border: solid 1px white;
+  padding: 12px 0;
+}
+
+@media screen and (max-width: 670px) {
+  .sec-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .bg-video {
+    height: 100vh;
+  }
+  /* feature */
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .feature img {
+    width: 382px;
+    max-width: 100%;
+  }
+}
