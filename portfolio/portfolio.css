@@ -1,0 +1,152 @@
+/* 全体に適用するスタイル */
+ul {
+  list-style: none;
+  padding: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  color: lightgrey;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* ここから各クラスのスタイル */
+/* Header */
+.mainHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+}
+.site-title {
+  flex: 2;
+  line-height: 1px;
+  padding: 10px 0;
+}
+.mainHeader nav {
+  flex: 1;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+nav li:not(:last-child) {
+  margin-right: 20px;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* main */
+.mainvisual img {
+  width: 100%;
+  max-width: 1920px;
+  height: 700px;
+  object-fit: cover;
+  margin: 0 0 80px;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto 130px auto;
+  font-size: 0.9rem;
+  padding: 0 4%;
+}
+
+.sec-title {
+  font-size: 1.5rem;
+  margin: 0 0 65px;
+}
+
+/* works */
+.works ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
+}
+
+.works li img {
+  width: 275px;
+  height: 183px;
+}
+
+/* news */
+.news dl {
+  display: grid;
+  grid-template-columns: auto auto;
+  border-top: 1px solid lightgray;
+}
+
+.news dt,
+.news dd {
+  margin: 0;
+  padding: 15px;
+  border-bottom: 1px solid lightgray;
+}
+
+/* contact */
+.contact dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.contact dt {
+  grid-column: 1;
+}
+
+.contact dd {
+  grid-column: 2;
+}
+
+.contact dd input,
+.contact dd textarea {
+  width: 100%;
+  padding: 15px 0;
+}
+
+.contact dd textarea {
+  height: 10rem;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}
+
+.button input {
+  width: 200px;
+  background-color: black;
+  color: white;
+  padding: 15px 0;
+}
+
+@media screen and (max-width: 670px) {
+  .mainHeader {
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
+  .works ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .works li img {
+    max-width: 100%;
+  }
+}
