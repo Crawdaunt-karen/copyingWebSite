@@ -1,0 +1,37 @@
+/* モーダルのスタイル */
+.modal {
+  display: none; /* 非表示にする */
+  position: fixed; /* 画面中央に表示されるように位置を固定する */
+  /* 他の要素より上に表示 */
+  left: 0;
+  top: 0;
+  width: 100%; /* フル幅 */
+  height: 100%; /* フル高さ */
+  overflow: auto; /* スクロールバーが必要なら表示 */
+  background-color: rgb(0, 0, 0); /* 背景色 */
+  background-color: rgba(0, 0, 0, 0.4); /* 黒色の背景に少し透明度を持たせる */
+}
+
+/* モーダルコンテンツのスタイル */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 上部から15％の余白を持たせて真ん中に表示する */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* 幅は80%に設定 */
+}
+
+/* 閉じるボタンのスタイル */
+.closeBtn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeBtn:hover,
+.closeBtn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
