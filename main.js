@@ -282,6 +282,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //ここからモーダルのためにwindow.onloadのイベントリスナーに記述
+
 // 課題13
 // ボタンを押下するとモーダルダイアログが出てきて、
 // 課題12で作成したボタンを押下するとAPIにGETリクエストが飛ぶ
@@ -291,10 +292,9 @@ window.addEventListener("load", () => {
   showModalBtn.textContent = "モーダルダイアログを開く";
   showModalBtn.className = "showModalBtn";
   const modalBtn = document.querySelector(".showModalBtn");
-
-  const s = document.querySelector(".APIButton");
   console.log("test");
   const modal = document.querySelector(".modal");
+  const modalcontent = document.querySelector(".modal-content");
   const closeBtn = document.querySelector(".closeBtn");
   function showModal() {
     modal.style.display = "block";
@@ -318,9 +318,8 @@ window.addEventListener("load", () => {
     const loadingImageOnModal = document.createElement("img");
     loadingImageOnModal.setAttribute("src", "loading-circle.gif");
     loadingImageOnModal.setAttribute("id", "loadingImageOnModal");
-    modal.appendChild(loadingImageOnModal);
+    modalcontent.appendChild(loadingImageOnModal);
   }
-
   function hideLoadingForModal() {
     const loadingImageOnModal = document.getElementById("loadingImageOnModal");
     if (loadingImageOnModal) {
@@ -359,6 +358,6 @@ window.addEventListener("load", () => {
   submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
     console.log(e.target.value);
-    // getInfoViaAPI();
+    getInfoViaAPI();
   });
 });
