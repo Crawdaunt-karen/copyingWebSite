@@ -1,0 +1,51 @@
+/* モーダルの基本スタイリング */
+.modal {
+  display: none; /* 要素を隠す */
+  position: fixed; /* 画面中央に表示 */
+  /* 他の要素の前面に表示 */
+  left: 0;
+  top: 0;
+  width: 100%; /* フルスクリーン */
+  height: 100%; /* フルスクリーン */
+  overflow: auto; /* スクロール可能に */
+  background-color: rgb(0, 0, 0); /* 背景色 */
+  background-color: rgba(0, 0, 0, 0.4); /* 背景色 with opacity */
+}
+
+/* モーダルのコンテンツスタイリング */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* ページの中央に配置 */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* モーダルの幅 */
+}
+
+/* クローズボタンのスタイリング */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.upper-alpha {
+  list-style-type: upper-alpha;
+}
+
+.block {
+  display: block;
+}
+
+.error-message {
+  color: red;
+  display: none; /* 最初は非表示にしておく */
+  margin-top: 10px; /* メッセージの位置を調整するためのマージン */
+}
