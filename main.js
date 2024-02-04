@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
     newsContentDiv.innerHTML = "";
     const articlesForCategory = articles[category];
     if (articlesForCategory) {
+      // 記事のカテゴリ分だけループ
       articlesForCategory.forEach((article) => {
         const articleContainer = document.createElement("div");
         articleContainer.classList.add("article-container");
@@ -55,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
         titleP.textContent = article.title;
         articleContainer.appendChild(titleP);
         if (Math.random() < 0.25) {
-          // 25% の確率
+          // 25% の確率でタイトルの横にnewをつける
           const newLabel = document.createElement("span");
           newLabel.textContent = "new ";
           newLabel.style.color = "red";
@@ -65,11 +66,13 @@ document.addEventListener("DOMContentLoaded", function () {
         // コメントの追加
         const commentList = document.createElement("ul");
         commentList.style.display = "inline-block";
+        // articleのコメント分だけループ
         article.comments.forEach((comment) => {
           const commentLi = document.createElement("li");
           commentLi.textContent = comment;
           commentList.appendChild(commentLi);
         });
+        // articleのコメントがあれば件数を表示
         if (article.comments.length > 0) {
           articleContainer.appendChild(commentList);
           const commentCount = document.createElement("span");
@@ -88,11 +91,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (activeCategory === category) {
       return;
     }
+    // activeCategoryに何らかの値が入っていれば、一旦記事を空にする
     if (activeCategory !== null) {
       const currentActiveLi = ul.querySelector(`#${activeCategory}Li`);
       hideArticlesForCategory(activeCategory);
       currentActiveLi.style.backgroundColor = "#fff";
     }
+    // 選択した記事のカテゴリを表示
     const selectedLi = ul.querySelector(`#${category}Li`);
     showArticlesForCategory(category);
     selectedLi.style.backgroundColor = "grey";
@@ -100,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function addListItem() {
+    // カテゴリの分だけリストを作る
     categories.forEach((category, index) => {
       const li = document.createElement("li");
       li.id = `${category}Li`;
@@ -114,9 +120,11 @@ document.addEventListener("DOMContentLoaded", function () {
       categoryDiv.id = `${category}Div`;
       ul.appendChild(li);
       document.body.appendChild(categoryDiv);
+      // 初期のカテゴリはnews
       if (category === "news") {
         setActiveCategory("news");
       }
+      // liをクリックしたらsetActiveCategoryを呼ぶ
       li.onclick = () => setActiveCategory(category);
     });
   }
