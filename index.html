@@ -23,20 +23,12 @@
             name="name"
             class="block"
             maxlength="16"
-            title="ユーザー名は15文字以下にしてください"
             required
           />
         </label>
         <label for="email" class="block"
           >メールアドレス
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="block"
-            title="メールアドレスの形式にしてください"
-            required
-          />
+          <input type="email" id="email" name="email" class="block" required />
         </label>
         <label for="password" class="block"
           >パスワード
@@ -46,23 +38,19 @@
             name="password"
             class="block"
             pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}"
-            title="8文字以上の大小の英数字を交ぜたものにしてください。"
             required
           />
         </label>
-        <input type="checkbox" id="checkbox" name="checkbox" />
-        <label for="termsCheckbox"
-          >利用規約に同意します (<a href="javascript:void(0);" id="termsLink"
-            >利用規約を読む</a
-          >)</label
-        >
+        <input type="checkbox" id="checkbox" name="checkbox" required />
+        <span>利用規約に同意します </span>(<a href="#" id="termsLink"
+          >利用規約を読む</a
+        >)
       </fieldset>
-      <span id="errorMessage" class="error-message"></span>
       <input type="submit" id="submitBtn" value="Submit" />
     </form>
     <div id="termsModal" class="modal">
       <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" id="closeBtn">&times;</span>
         <h1>利用規約</h1>
         <h2>第1条（適用）</h2>
         <ol>
@@ -139,7 +127,6 @@
           </li>
           <li>その他，当社が不適切と判断する行為</li>
         </ol>
-        <!-- その他の利用規約の内容 -->
       </div>
     </div>
   </body>

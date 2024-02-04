@@ -2,30 +2,26 @@ window.addEventListener("load", () => {
   // モーダルとリンクの要素を取得
   var modal = document.getElementById("termsModal");
   var link = document.getElementById("termsLink");
-  var closeButton = document.querySelector(".close");
+  var closeButton = document.getElementById("closeBtn");
   var checkbox = document.getElementById("checkbox");
   var form = document.getElementById("form");
   var submitBtn = document.getElementById("submitBtn");
 
   checkbox.addEventListener("change", (e) => {
-    if (e.target.checked) {
-      submitBtn.disabled = false;
-    } else {
-      submitBtn.disabled = true;
-    }
+    submitBtn.disabled = e.target.checked;
   });
 
-  // リンクをクリックした時にモーダルを表示するイベントリスナーを追加
+  // リンクをクリックした時にモーダルを表示する
   link.onclick = function () {
     modal.style.display = "block";
   };
 
-  // クローズボタンをクリックした時にモーダルを非表示にするイベントリスナーを追加
+  // クローズボタンをクリックした時にモーダルを非表示にする
   closeButton.onclick = function () {
     modal.style.display = "none";
   };
 
-  // モーダルの外側をクリックした時にモーダルを非表示にするイベントリスナーを追加
+  // モーダルの外側をクリックした時にモーダルを非表示にする
   window.onclick = function (event) {
     if (event.target == modal) {
       modal.style.display = "none";
@@ -37,22 +33,33 @@ window.addEventListener("load", () => {
     if (modal.scrollTop + modal.clientHeight >= modal.scrollHeight) {
       // 最下部に達したらチェックを入れる
       checkbox.checked = true;
+      //かつ、フォームの入力要素が全てvalidならsubmitボタンを有効にする
+      if (form.checkValidity()) {
+        submitBtn.disabled = false;
+      }
+    }
+  });
+
+  form.addEventListener("change", (e) => {
+    if (form.checkValidity()) {
+      submitBtn.disabled = false;
     }
   });
 
   form.addEventListener("submit", (e) => {
-    if (!checkbox.checked) {
-      e.preventDefault();
-      return;
+    e.preventDefault(); //フォームの送信を阻止する
+
+    //バリデーションをチェック
+    if (!form.checkValidity()) {
+      console.log("フォームの入力エラー");
+      return; // 処理を終了
+    } else {
+      //登録済みのページに遷移
+      window.location.href = "register-done.html";
     }
-    e.preventDefault();
-    window.location.href = "register-done.html";
   });
 
-  checkbox.disabled = false;
+  // 初期状態ではチェックボックスもsubmitボタンもdisable状態にしておく
+  checkbox.disabled = true;
   submitBtn.disabled = true;
 });
-
-window.onload = () => {
-  var passwordInput = document.getElementById("password");
-};
