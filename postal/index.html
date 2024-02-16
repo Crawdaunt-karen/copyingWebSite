@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="main.js"></script>
+    <input
+      type="text"
+      name="postCode"
+      id="postCode"
+      placeholder="郵便番号"
+      pattern="^\d{7}$"
+      title="郵便番号をハイフンなしの7桁の数字で入力してください（例：1234567）。"
+    />
+    <select name="prefecture" id="prefecture" placeholder="都道府県">
+      <option value="">都道府県</option>
+    </select>
+    <input type="text" name="cityTown" id="cityTown" placeholder="市区町村" />
+    <input
+      type="text"
+      name="streetAddress"
+      id="streetAddress"
+      placeholder="番地以降"
+    />
+    <span class="error-message"></span>
+  </head>
+  <body></body>
+</html>

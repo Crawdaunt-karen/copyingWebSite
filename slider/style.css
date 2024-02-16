@@ -1,0 +1,9 @@
+.visual {
+  margin-bottom: 60px;
+}
+
+.visual li img {
+  display: block; /* 画像をブロック要素として扱う */
+  margin-left: auto;
+  margin-right: auto;
+}
