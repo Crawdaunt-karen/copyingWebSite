@@ -11,19 +11,23 @@ function App() {
     checked: boolean;
   };
 
+  // formにあるinput要素が変更したとき
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
+    // input要素に変更した値を入れる
     setInputValue(e.target.value);
   };
+  // formをsubmitしたとき
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // 型がTodoであるオブジェクトを作成して、新しいTodoリストの要素を作成
     const newTodo: Todo = {
       inputValue: inputValue,
       id: todos.length,
       checked: false,
     };
+    // 新しく作成したTodoリストを、既存のTodoリストに追加する
     setTodos([newTodo, ...todos]);
-    setInputValue("");
   };
   const handleEdit = (id: number, inputValue: string) => {
     const newTodos = todos.map((todo) => {
@@ -35,7 +39,10 @@ function App() {
     setTodos(newTodos);
   };
 
+  // チェックボックスをtoggleさせる
   const handleChecked = (id: number, checked: boolean) => {
+    // todosの配列にmap関数で処理をする
+    // チェックされたidと一致した配列の要素のみtoggleさせ、Todoリストを更新する
     const newTodos = todos.map((todo) => {
       if (todo.id === id) {
         todo.checked = !checked;
@@ -44,6 +51,7 @@ function App() {
     });
     setTodos(newTodos);
   };
+  // 消すボタンを押したリストのidと一致するTodoリストの配列の要素を削除して更新
   const handleDelete = (id: number) => {
     const newTodos = todos.filter((todo) => todo.id !== id);
     setTodos(newTodos);
