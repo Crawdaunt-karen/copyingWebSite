@@ -1,0 +1,107 @@
+/* リストのスタイルを消しておく */
+ul {
+  list-style-type: none;
+}
+.centered-h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+}
+.menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.company-concept {
+  padding: 50px 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 1170px;
+}
+
+.company-container {
+  display: flex;
+  align-items: center;
+}
+
+.company-container-item {
+  flex: 1;
+}
+
+.concept-textArea {
+  margin-left: 40px;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+  letter-spacing: 0.1em;
+  font-size: 16px;
+}
+
+.title {
+  font-weight: bold;
+  color: #24a8bf;
+  margin-bottom: 30px;
+  line-height: 1.5;
+  font-size: 32px;
+}
+
+.company-blog {
+  margin: 50px 0;
+}
+
+.blog {
+  text-align: center;
+}
+
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+  gap: 20px;
+}
+
+.blog-title {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.time-description {
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  color: #24a8bf;
+  text-decoration: none;
+  border: 1px solid #24a8bf;
+  padding: 18px 0;
+  font-size: 15px;
+  font-weight: bold;
+  width: 220px;
+  text-align: center;
+  border-radius: 2px;
+  background-image: url(images/icon_arrow-right.png);
+  background-size: 5px 10px;
+  background-repeat: no-repeat;
+  background-position: 180px center;
+}
+
+.footer-area {
+  background-color: black;
+  padding: 70px 0 30px;
+}
+
+.footer-logo-section {
+  width: 180px;
+  margin: 0 auto;
+}
