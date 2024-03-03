@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <h1 class="centered-h1">
+      <a href="/">
+        <img src="images/logo.png" alt="sky coffee" />
+      </a>
+    </h1>
+  </head>
+  <body>
+    <picture>
+      <source media="(min-width:768px)" srcset="images/pc_main-visual.jpg" />
+      <source media="(max-width:767px)" srcset="images/sp_main-visual.jpg" />
+      <img src="images/pc_main-visual.jpg" />
+    </picture>
+    <ul class="menu-list">
+      <li>menu</li>
+      <li>blog</li>
+      <li>access</li>
+    </ul>
+    <main>
+      <section class="company-concept">
+        <div class="container">
+          <div class="company-container">
+            <div class="company-container-item">
+              <img src="images/concept.jpg" class="concept-img" />
+            </div>
+            <div class="container-item concept-textArea">
+              <div class="subtitle">concept</div>
+              <h2 class="title">心静かにコーヒーを</h2>
+              <p>
+                立ち止まって、<br />
+                空の青さを眺めて<br />
+                一息つきましょう。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="company-blog">
+        <div class="container">
+          <h2 class="title blog">blog</h2>
+          <ul class="blog-list">
+            <li>
+              <img src="images/thumbnail01.jpg" class="blog-pic" />
+              <h3 class="blog-title">コーヒーカー始めました。</h3>
+              <time class="time-description" datetime="2023-08-08"
+                >2023.08.08</time
+              >
+            </li>
+            <li>
+              <img src="images/thumbnail02.jpg" class="blog-pic" />
+              <h3 class="blog-title">濃厚クリーミーなミルクをどうぞ</h3>
+              <time class="time-description" datetime="2023-08-08"
+                >2023.08.08</time
+              >
+            </li>
+            <li>
+              <img src="images/thumbnail03.jpg" class="blog-pic" />
+              <h3 class="blog-title">無料ダウンロード可能です</h3>
+              <time class="time-description" datetime="2023-08-08"
+                >2023.08.08</time
+              >
+            </li>
+            <li>
+              <img src="images/thumbnail04.jpg" class="blog-pic" />
+              <h3 class="blog-title">ハイキング用のコーヒーを販売中です</h3>
+              <time datetime="2023-08-08">2023.08.08</time>
+            </li>
+            <li>
+              <img src="images/thumbnail05.jpg" class="blog-pic" />
+              <h3 class="blog-title">ショップの壁を塗ってみました。</h3>
+              <time class="time-description" datetime="2023-08-08"
+                >2023.08.08</time
+              >
+            </li>
+            <li>
+              <img src="images/thumbnail06.jpg" class="blog-pic" />
+              <h3 class="blog-title">ブログ始めました。</h3>
+              <time class="time-description" datetime="2023-08-08"
+                >2023.08.08</time
+              >
+            </li>
+          </ul>
+          <a href="#" class="button">ブログ一覧</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-area">
+      <div class="footer-logo-section">
+        <a href="#">
+          <img src="images/logo-white.png" alt="sky coffee" />
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
