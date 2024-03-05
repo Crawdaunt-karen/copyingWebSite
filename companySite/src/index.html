@@ -9,16 +9,36 @@
       href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
     />
     <link rel="stylesheet" href="style/style.css" />
-    <div class="header-area">
-      <a href="/"> <img src="../img/logo.svg" /> </a>
-      <ul class="menu-list">
-        <li class="menu-list-item font-bold"><a href="/">ホーム</a></li>
-        <li class="menu-list-item font-bold"><a href="#">メッセージ</a></li>
-        <li class="menu-list-item font-bold"><a href="#">会社概要</a></li>
-      </ul>
-    </div>
   </head>
   <body>
+    <header class="header-area">
+      <a href="/"> <img src="../img/logo.svg" alt="START" /> </a>
+      <ul class="menu-list">
+        <li class="menu-list-item font-bold"><a href="/">ホーム</a></li>
+        <li id="menu-list-item-message" class="menu-list-item font-bold">
+          <a href="#">メッセージ</a>
+        </li>
+        <li
+          id="menu-list-item-companyAbstract"
+          class="menu-list-item font-bold"
+        >
+          <a href="#">会社概要</a>
+        </li>
+      </ul>
+    </header>
+    <main>
+      <section class="main-area">
+        <picture>
+          <source media="(min-width:768px)" srcset="../img/pc_mv.jpg" />
+          <source media="(max-width:767px)" srcset="../img/sp_mv.jpg" />
+          <img src="../img/pc_mv.jpg" alt="" />
+        </picture>
+        <div class="company-name-area">
+          <h1 class="company-name">START</h1>
+          <p class="company-name-description">仕事に最高のスタートを</p>
+        </div>
+      </section>
+    </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main.js"></script>
   </body>
