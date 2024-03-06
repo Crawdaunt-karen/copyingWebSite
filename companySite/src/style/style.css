@@ -171,3 +171,156 @@ a {
   color: #fff;
   font-size: 14px;
 }
+
+/* PCのときはheaderのハンバーガーメニューのボタンは非表示にする */
+#header-menu-btn {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  /* headerエリア */
+  .header-area {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+  }
+  .logo-img {
+    width: 107px;
+  }
+  /* headerのハンバーガーメニューの部分 */
+  #header-menu-btn {
+    display: block;
+    background: #dd1b57;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    z-index: 10;
+  }
+  #header-menu-btn span {
+    background: #fff;
+    display: block;
+    content: "";
+    height: 2px;
+    position: relative;
+    width: 100%;
+  }
+
+  #header-menu-btn span:before,
+  #header-menu-btn span:after {
+    background: #fff;
+    display: block;
+    content: "";
+    height: 2px;
+    position: absolute;
+    width: 100%;
+  }
+
+  #header-menu-btn span:before {
+    top: -8px;
+  }
+  #header-menu-btn span:after {
+    top: 8px;
+  }
+
+  #header-menu-btn.active span {
+    background: transparent;
+  }
+
+  #header-menu-btn.active span:before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  #header-menu-btn.active span:after {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .menu-list {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 180px;
+    height: 100%;
+    background-color: #dd1b57;
+    transition: right 0.5s ease;
+    padding: 90px 20px 20px 50px;
+    z-index: 1;
+  }
+  .menu-list.active {
+    display: block;
+  }
+  .menu-list-item a {
+    color: #fff;
+  }
+  .menu-list-item:not(:last-child) {
+    margin-bottom: 25px;
+  }
+  .active-link {
+    opacity: 0.6;
+  }
+
+  /* mainエリア */
+  .container {
+    padding: 0 20px;
+  }
+  /* mainのcompany-nameアリア */
+  .company-name {
+    font-size: 80px;
+  }
+  .company-name-description {
+    font-size: 20px;
+  }
+
+  /* mainのnewsエリア */
+  .news-area {
+    flex-direction: column;
+  }
+  .news-area-item {
+    padding: 0;
+  }
+  .section-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .time-description {
+    display: block;
+  }
+
+  .service-list {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .service-list-item {
+    padding: 40px 30px;
+  }
+
+  .service-list-item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .service-area::after {
+    top: 5%;
+    left: 60%;
+    font-size: 70px;
+  }
+  .footer-area {
+    padding: 30px 0 30px;
+  }
+  .footer-menu-list-item:not(:last-child) {
+    margin-right: 25px;
+  }
+  .footer-menu-list-item a {
+    font-size: 12px;
+  }
+}
