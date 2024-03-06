@@ -8,6 +8,10 @@
       rel="stylesheet"
       href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
@@ -27,7 +31,7 @@
       </ul>
     </header>
     <main>
-      <section class="main-area">
+      <section class="section-main-area">
         <picture>
           <source media="(min-width:768px)" srcset="../img/pc_mv.jpg" />
           <source media="(max-width:767px)" srcset="../img/sp_mv.jpg" />
@@ -38,7 +42,89 @@
           <p class="company-name-description">仕事に最高のスタートを</p>
         </div>
       </section>
+      <section class="sub-area">
+        <section class="news-area">
+          <h2 class="section-title">ニュース</h2>
+          <ul class="news-area-item">
+            <li class="news-item">
+              <a href="#">
+                <time class="time-description" datetime="2023-08-08">
+                  2023.08.08
+                </time>
+                コーポレーションサイトをリニューアルしました
+              </a>
+            </li>
+            <li class="news-item">
+              <a href="#">
+                <time class="time-description" datetime="2023-08-08"
+                  >2023.08.08
+                </time>
+                採用を強化中です！一緒に働きませんか？
+              </a>
+            </li>
+            <li class="news-item">
+              <a href="#">
+                <time class="time-description" datetime="2023-08-08"
+                  >2023.08.08
+                </time>
+                人材紹介SNS『スタート』をリリースしました。3/31まで新規登録キャンペーンを開催中です！サービス内で使える500ポイントをプレゼント！
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="service-area">
+          <div class="container">
+            <h2 class="section-title">サービス</h2>
+            <ul class="service-list">
+              <li class="service-list-item">
+                <div class="centered-inline">
+                  <span class="material-icons main-color service-icon"
+                    >work</span
+                  >
+                  <h3 class="each-service-title">人材紹介業</h3>
+                </div>
+                <p>
+                  新規サイトの制作はもちろんサイトリニューアルやランディングページの制作も可能です。
+                </p>
+              </li>
+              <li class="service-list-item">
+                <div class="centered-inline">
+                  <span class="material-icons main-color service-icon"
+                    >location_city</span
+                  >
+                  <h3 class="each-service-title">スクール事業</h3>
+                </div>
+                <p>オンラインでWeb制作を学べるスクールを運営しています。</p>
+              </li>
+              <li class="service-list-item">
+                <div class="centered-inline">
+                  <span class="material-icons main-color service-icon">
+                    desktop_windows
+                  </span>
+                  <h3 class="each-service-title">Webメディア運営</h3>
+                </div>
+                <p>
+                  人事系メディアやWebデザイン関連のメディアなどを複数運営します。
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
     </main>
+    <footer class="footer-area">
+      <ul class="footer-menu-list">
+        <li class="footer-menu-list-item font-bold">
+          <a href="/" class="white-color">ホーム</a>
+        </li>
+        <li class="footer-menu-list-item font-bold">
+          <a href="#" class="white-color">メッセージ</a>
+        </li>
+        <li class="footer-menu-list-item font-bold">
+          <a href="#" class="white-color">会社概要</a>
+        </li>
+      </ul>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="main.js"></script>
   </body>
