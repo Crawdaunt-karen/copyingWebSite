@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/message.css" />
+  </head>
+  <body>
+    <header class="header-area">
+      <a href="/">
+        <img src="../img/logo.svg" alt="START" class="logo-img" />
+      </a>
+      <button id="header-menu-btn"><span></span></button>
+      <nav>
+        <ul class="menu-list">
+          <li class="menu-list-item font-bold">
+            <a href="/" class="link">ホーム</a>
+          </li>
+          <li id="menu-list-item-message" class="menu-list-item font-bold">
+            <a href="message.html" class="link">メッセージ</a>
+          </li>
+          <li
+            id="menu-list-item-companyAbstract"
+            class="menu-list-item font-bold"
+          >
+            <a href="#" class="link">会社概要</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div class="message-name-area">
+          <picture>
+            <source media="(min-width:768px)" srcset="../img/pc_mv.jpg" />
+            <source media="(max-width:767px)" srcset="../img/sp_mv.jpg" />
+            <img src="../img/pc_mv.jpg" alt="" class="background-img" />
+          </picture>
+          <h1 class="message-name">メッセージ</h1>
+        </div>
+        <div class="message-description-area">
+          <div class="container">
+            <div class="h2-message-area">
+              <h2 class="h2-message">
+                「仕事」をきっかけに<br />人生の新しいスタートを！
+              </h2>
+              <p class="h2-description">大事なお仕事探しを応援させてください</p>
+            </div>
+            <div class="ceo-area">
+              <img src="../img/ceo.jpg" alt="CEOの顔写真" class="rounded-img" />
+              <p>
+                はじめまして。代表取締役社長のショーン・デイビット・ジュニアです。<br />
+                私はそこそこ幸せです。それは仕事が楽しいからです。もちろん仕事イコール人生ではありません。でも仕事は人生の大事な基盤のように思っています。<br />
+                株式会社STARTは、みなさんが仕事をきっかけに理想の人生を実現する手助けをしています。幸せにつながるお仕事紹介サービス<a
+                  href="#"
+                  >『スタート』</a
+                >や、共通の目標を目指す仲間が見つかる人材紹介SNS<a href="#">
+                  『ゴール』</a
+                >を運営しています。また、Webデザインの基礎スキルを身につけられるスクール<a
+                  href="#"
+                  >『Webの学校』</a
+                >も随時開講しています。
+              </p>
+            </div>
+            <img src="../img/office.jpg" alt="会議室" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-area">
+      <ul class="footer-menu-list">
+        <li class="footer-menu-list-item font-bold">
+          <a href="/" class="white-color link">ホーム</a>
+        </li>
+        <li class="footer-menu-list-item font-bold">
+          <a href="#" class="white-color link">メッセージ</a>
+        </li>
+        <li class="footer-menu-list-item font-bold">
+          <a href="#" class="white-color link">会社概要</a>
+        </li>
+      </ul>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="message.js"></script>
+  </body>
+</html>
