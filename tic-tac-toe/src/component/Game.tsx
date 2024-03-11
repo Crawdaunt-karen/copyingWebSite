@@ -1,27 +1,7 @@
 import React, { useState } from "react";
 import "../style.css";
 import { Board } from "./Board";
-// import { calculateWinner } from "../utils/calculateWinner";
-
-const calculateWinner = (squares: (string | null)[]): string | null => {
-  const lines = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-  ];
-  for (let i = 0; i < lines.length; i++) {
-    const [a, b, c] = lines[i];
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
-    }
-  }
-  return null;
-};
+import { calculateWinner } from "../utils/calculateWinner";
 
 export const Game: React.FC = () => {
   // Array(9).fill(null) で9 個の要素を全てにnullを設定した配列のsquaresが初期値
@@ -30,30 +10,36 @@ export const Game: React.FC = () => {
   ]);
   // 現在何番目のstepかを保持するstate
   const [stepNumber, setStepNumber] = useState(0);
+  // 現在のプレーヤーがXかOかを決定する
+  //stepNumber(手番)が偶数ならX、奇数ならO
   const xIsNext = stepNumber % 2 === 0;
 
   // Squareコンポーネントでclickが起きたとき
-  // iはどのSquareコンポーネントがクリックされたかを識別するインデックス的なやつ
+  // iはどのSquareコンポーネントがクリックされたかを識別するインデックス
   const handlePlay = (i: number) => {
-    // 現在までのゲームの履歴をコピーし、かつ現在の状態を取得
-    // 例えばゲームが4手進んでいるとすると、stepNumberは3
-    // そこでhistory.slice(0, 3 + 1)を呼び出すとインデックス0から3までの4つの状態を含む新しい配列が得られる
+    // historyPointはゲームが開始してから、現在の手番までの全てのボードの状態を保持する配列
+    // ゲームが任意の段階に戻った時に、その時点からゲームを再開できる
     const historyPoint = history.slice(0, stepNumber + 1);
 
-    // 現在のボードの状態を取得
+    // currentは、最後のゲームの状態を保持
     const current = historyPoint[historyPoint.length - 1];
+    //squaresはcurrentの個々のマスの状態をX,O,nullのいずれかで保存している
     const squares = current.squares.slice();
 
-    // もし勝敗がすでに決まっていたら何もしない
+    // もし勝敗がすでに決まっているか、そのマスが埋まっていたら何もしない
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
 
+    // 選択されたマスを現在のプレーヤーのマーク(X or O)で更新
     squares[i] = xIsNext ? "X" : "O";
+    // historyPointにsquaresを追加したhistoryをsetする
     setHistory(historyPoint.concat([{ squares }]));
+    // 手番の更新
     setStepNumber(historyPoint.length);
   };
 
+  // どの手番に戻るかの文字列
   const jumpTo = (step: number) => {
     setStepNumber(step);
   };
