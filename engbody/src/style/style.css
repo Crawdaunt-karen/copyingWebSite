@@ -1,0 +1,27 @@
+.logo-img {
+  padding: 20px;
+}
+
+.mv_area {
+  position: relative;
+  height: 410px;
+  margin: 0 auto;
+}
+.mv_img {
+  position: absolute;
+  top: -20%;
+  right: 0;
+  z-index: -1;
+  background-image: url("../../img/bg_mv.jpg");
+  width: 70%;
+  height: 410px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 0 0 0 50px;
+}
+.mv_main {
+  font-style: italic;
+  line-height: 1;
+  margin-bottom: 10px;
+}
