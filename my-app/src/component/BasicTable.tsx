@@ -32,7 +32,7 @@ export const BasicTable = () => {
     setModalOpen(true);
   };
 
-  // ダイアログを閉じる
+  // ダイアログを閉じるstateをset
   const handleCloseModal = () => {
     setModalOpen(false);
   };
