@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>ENGBODY</title>
     <link
       rel="stylesheet"
-      href="https://unpkg.com/modern-css-reset/dist/reset.min.css"
+      href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
     />
     <link rel="stylesheet" href="style/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -19,10 +20,138 @@
     <main>
       <div class="mv_area">
         <div class="mv_title">
-          <span class="mv_main">Body Make<br />&English</span>
+          <h1 class="mv_main">
+            Body Make<br /><span class="text-mainColor">&</span>English
+          </h1>
+          <span class="mv_sub">英会話＆パーソナルトレーニングジム</span>
         </div>
         <div class="mv_img"></div>
+        <div class="btn-common btn-absolute">
+          <a href="#">無料カウンセリングを受ける</a>
+        </div>
       </div>
     </main>
+    <section>
+      <div class="h2_area">
+        <h2 class="h2_text">YOU CAN <br />DO IT!</h2>
+        <p class="h2_subText">
+          英語とトレーニングの<span class="text-mainColor">蜜月関係</span>
+        </p>
+        <div class="h2_area_description">
+          <p>
+            Hey,guys!英語を話している時ってなんだかテンションが上がりますか？
+          </p>
+          <p>
+            バイブス高めでトレーニングをすれば、あなたのベストなパフォーマンスが出せます！
+          </p>
+          <p>英語と運動に自信がなくたってOK！</p>
+          <p>
+            優しくて盛り上げな上手な外国人トレーナーがしっかりサポートします。
+          </p>
+          <p>さぁ、ENGBODYで英語でパーソナルトレーニングを受けましょう。</p>
+        </div>
+      </div>
+    </section>
+    <section class="training-and-food">
+      <div class="training">
+        <div class="img-container">
+          <img src="../img/about-training.jpg" alt="" class="tf_img" />
+        </div>
+        <div class="card">
+          <h3 class="h3_title text-mainColor">Training</h3>
+          <h4 class="h4_title">
+            セッションはすべて英語。<br />LAさながらの環境
+          </h4>
+          <p class="text">
+            ネイティブスピーカーによる50分のパーソナルトレーニングはすべて英語です！アップテンポの洋楽が流れる空間でテンション高めのトレーナーが英語であなたのトレーニングを盛り上げてくれます。ダイエットでよく使う英語をまとめたオリジナルテキストもあるのでスピーキング学習もバッチリです！
+          </p>
+        </div>
+      </div>
+      <div class="food">
+        <img src="../img/about-food.jpg" alt="" class="tf_img" />
+        <div class="card">
+          <h3 class="h3_title text-Green">Food</h3>
+          <h4 class="h4_title">
+            低糖質レストランを完備！<br />美味しく食べてダイエット
+          </h4>
+          <p class="text">
+            食事制限って大変ですよね......。でも大丈夫！ENGBODY館内には低糖質レストラン『LCR』を完備しています。Low
+            carb（低糖質）なのにとっても美味しい味に驚くはずです！メニューも豊富で飽きさせません。美味しく食べてしっかり痩せる！しかも英語力もアップ！それがENGBODYなのです。
+          </p>
+        </div>
+      </div>
+      <div class="btn-common btn-block">
+        <a href="#">無料カウンセリングを受ける</a>
+      </div>
+    </section>
+    <section class="our-trainer-section">
+      <img src="../img/bg-wave-top.svg" alt="" />
+      <div class="pink-area">
+        <h3 class="h3_trainer">Our Trainer</h3>
+        <p>トレーナー</p>
+        <div class="tab center">
+          <button class="tablinks" onclick="openTab(event, 'Tab1')">
+            トレーナー
+          </button>
+          <button class="tablinks" onclick="openTab(event, 'Tab2')">
+            スタッフ
+          </button>
+        </div>
+        <div id="Tab1" class="tabcontent">
+          <ul class="trainer-list">
+            <li class="trainer-list-item">
+              <div class="our-trainer-section-card">
+                <img src="../img/trainer01.jpg" class="img-list" />
+              </div>
+              <p class="our-trainer-description">
+                こんにちは！英語で楽しくトレーニングしましょう。日本語が話せますのでご安心ください。
+              </p>
+            </li>
+            <li class="trainer-list-item">
+              <div class="our-trainer-section-card">
+                <img src="../img/trainer02.jpg" class="img-list" />
+              </div>
+              <p class="our-trainer-description">
+                Hello!筋肉をつけすぎずしなやかな体を作ることが得意です！美しさを磨いていきましょう。
+              </p>
+            </li>
+            <li class="trainer-list-item">
+              <div class="our-trainer-section-card">
+                <img src="../img/trainer03.jpg" class="img-list" />
+              </div>
+              <p class="our-trainer-description">
+                Hi,負荷や強度の高いトレーニングがしたいならおまかせください！どんなご要望もできる限り叶えますよ！
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div id="Tab2" class="tabcontent">
+          <ul class="trainer-list">
+            <li class="trainer-list-item">
+              <div class="our-trainer-section-card">
+                <img src="../img/staff01.jpg" class="img-list" />
+              </div>
+              <p class="our-trainer-description">
+                ENGBODYは明るくてとっても楽しいジムです！みなさんのセッションが楽しくなるようにサポートいたします。
+              </p>
+            </li>
+            <li class="trainer-list-item">
+              <div class="our-trainer-section-card">
+                <img src="../img/staff02.jpg" class="img-list" />
+              </div>
+              <p class="our-trainer-description">
+                Hi,please let me know anytime if you have any questions. We will
+                fully support you!
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <img src="../img/bg-wave-bottom.svg" alt="" />
+    </section>
+    <section class="studio"></section>
+    <section class="price"></section>
+    <section class="faq"></section>
+    <script src="main.js"></script>
   </body>
 </html>

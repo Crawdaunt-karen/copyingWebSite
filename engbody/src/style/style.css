@@ -1,11 +1,51 @@
+:root {
+  --main-color: #eb51c2;
+  --green-color: #00b21b;
+  --white-color: #fff;
+}
+.text-mainColor {
+  color: var(--main-color);
+}
+.text-Green {
+  color: var(--green-color);
+}
+
+/* ボタン共通のクラス */
+.btn-common {
+  display: inline-block;
+  border-radius: 50px;
+  background-color: var(--main-color);
+  color: var(--white-color);
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+/* ボタン絶対位置用 */
+.btn-absolute {
+  position: absolute;
+  width: 220px;
+  top: 50%;
+  right: 35%;
+}
+
+/* ボタンブロック要素中央寄せ用 */
+.btn-block {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* mainのmvエリア */
 .logo-img {
   padding: 20px;
 }
-
 .mv_area {
   position: relative;
   height: 410px;
   margin: 0 auto;
+  padding-left: 20px;
 }
 .mv_img {
   position: absolute;
@@ -20,8 +60,137 @@
   background-size: cover;
   border-radius: 0 0 0 50px;
 }
-.mv_main {
-  font-style: italic;
+.mv_title {
   line-height: 1;
   margin-bottom: 10px;
+}
+.mv_main {
+  background-color: var(--white-color);
+  font-style: italic;
+  font-size: 40px;
+  position: absolute;
+  top: 20%;
+  right: 35%;
+}
+.mv_sub {
+  background-color: var(--white-color);
+  font-size: 15px;
+  position: absolute;
+  top: 42%;
+  right: 30%;
+}
+
+/* セクションエリア */
+/* h2(YOU CAN DO ITのとこ) */
+.h2_area {
+  padding: 0 20px;
+  margin-top: -100px;
+}
+.h2_text {
+  font-size: 56px;
+  font-style: italic;
+  font-weight: 700;
+  text-align: center;
+  color: var(--main-color);
+}
+.h2_subText {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.h2_area_description {
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* trainingとfoodセクション */
+.training-and-food {
+  padding: 20px 0;
+}
+.tf_img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+  display: block;
+}
+.card {
+  background-color: var(--white-color);
+  padding: 40px 30px 30px 30px;
+  margin: 0 20px;
+  box-shadow: 0 0 20px;
+  border-radius: 8px;
+  transform: translateY(-10%);
+}
+.h3_title {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.h4_title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.text {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* our-trainerセクション */
+.pink-area {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  padding: 0 30px;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+}
+.tablinks {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+.center {
+  text-align: center;
+}
+.h3_trainer {
+  padding-top: 20px;
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+.tab {
+  font-size: 16px;
+  padding: 5px 0 10px 0;
+  border-radius: 10px;
+  display: flex;
+}
+.tablinks {
+  flex: 1;
+}
+.tablinks.active {
+  border-bottom: 2px solid var(--white-color);
+  font-weight: bold;
+}
+.img-list {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+.our-trainer-section-card {
+  border-radius: 10px;
+  background-color: var(--white-color);
+}
+.trainer-list-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+.our-trainer-description {
+  background: var(--white-color);
+  color: black;
+  border-radius: 0 0 10px 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 20px;
 }
