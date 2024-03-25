@@ -37,6 +37,25 @@
   margin: 0 auto;
 }
 
+/* h3共通クラス */
+.h3_base {
+  padding-top: 20px;
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+
+/* containerクラス */
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* セクションタイトル用クラス */
+.section-title {
+  margin-bottom: 30px;
+}
+
 /* mainのmvエリア */
 .logo-img {
   padding: 20px;
@@ -146,20 +165,8 @@
   display: none;
   padding: 6px 12px;
 }
-.tablinks {
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-}
 .center {
   text-align: center;
-}
-.h3_base {
-  padding-top: 20px;
-  font-size: 40px;
-  padding-bottom: 10px;
 }
 .tab {
   font-size: 16px;
@@ -168,6 +175,11 @@
   display: flex;
 }
 .tablinks {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
   flex: 1;
 }
 .tablinks.active {
@@ -193,4 +205,30 @@
   font-size: 14px;
   line-height: 1.6;
   padding: 20px;
+}
+
+/* studioセクション */
+.studio-slider-item {
+  width: 315px;
+}
+.studio-img {
+  max-width: 100%;
+  height: auto;
+}
+.slick-prev::before,
+.slick-next::before {
+  color: var(--main-color);
+  font-size: 24px;
+}
+.slick-dots li.slick-active button:before {
+  color: var(--main-color);
+}
+
+/* priceセクション */
+.price-box {
+  width: 100%;
+  background-color: var(--white-color);
+  color: black;
+  border-radius: 8px;
+  padding: 40px 20px 0;
 }

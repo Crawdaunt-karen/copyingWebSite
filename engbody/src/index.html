@@ -8,8 +8,22 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
     <link rel="stylesheet" href="style/style.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -90,12 +104,8 @@
         <h3 class="h3_base">Our Trainer</h3>
         <p>トレーナー</p>
         <div class="tab center">
-          <button class="tablinks" onclick="openTab(event, 'Tab1')">
-            トレーナー
-          </button>
-          <button class="tablinks" onclick="openTab(event, 'Tab2')">
-            スタッフ
-          </button>
+          <button class="tablinks" data-tab="Tab1">トレーナー</button>
+          <button class="tablinks" data-tab="Tab2">スタッフ</button>
         </div>
         <div id="Tab1" class="tabcontent">
           <ul class="trainer-list">
@@ -150,17 +160,96 @@
       <img src="../img/bg-wave-bottom.svg" alt="" />
     </section>
     <section class="studio">
-      <div></div>
-      <h3 class="h3_base">Studio</h3>
-      <p>スタジオ</p>
+      <div class="container">
+        <div class="section-title">
+          <h3 class="h3_base">Studio</h3>
+          <p class="text-mainColor">スタジオ</p>
+        </div>
+        <ul class="studio-slider">
+          <li class="studio-slider-item">
+            <img src="../img/studio01.jpg" class="studio-img" />
+          </li>
+          <li class="studio-slider-item">
+            <img src="../img/studio02.jpg" class="studio-img" />
+          </li>
+          <li class="studio-slider-item">
+            <img src="../img/studio03.jpg" class="studio-img" />
+          </li>
+        </ul>
+      </div>
     </section>
     <section class="price">
-      <h3 class="h3_base">Price</h3>
-      <p>料金</p>
+      <img src="../img/bg-wave-top.svg" alt="" />
+      <div class="pink-area">
+        <div class="container">
+          <div class="section-title">
+            <h3 class="h3_base">Price</h3>
+            <p>料金</p>
+          </div>
+          <ul class="price-slider">
+            <li>
+              <div class="price-box">
+                <h4>週1コース</h4>
+                <dl>
+                  <dt>料金</dt>
+                  <dd>¥20,000 (入会金 ¥10,000)</dd>
+                  <dt>レンタル</dt>
+                  <dd>タオル、ウェア、プロテイン無料</dd>
+                  <dt>レストラン</dt>
+                  <dd>使用不可</dd>
+                  <dt>食事指導</dt>
+                  <dd>なし</dd>
+                </dl>
+              </div>
+            </li>
+            <li>
+              <div class="price-box">
+                <h4>週2コース</h4>
+                <dl>
+                  <dt>料金</dt>
+                  <dd>¥40,000 (入会金 ¥10,000)</dd>
+
+                  <dt>レンタル</dt>
+                  <dd>タオル、ウェア、プロテイン無料</dd>
+
+                  <dt>レストラン</dt>
+                  <dd>使用不可</dd>
+
+                  <dt>食事指導</dt>
+                  <dd>なし</dd>
+                </dl>
+              </div>
+            </li>
+            <li>
+              <div class="price-box">
+                <h4>無制限</h4>
+                <dl>
+                  <dt>料金</dt>
+                  <dd>¥70,000 (入会金 ¥10,000)</dd>
+
+                  <dt>レンタル</dt>
+                  <dd>タオル、ウェア、プロテイン無料</dd>
+
+                  <dt>レストラン</dt>
+                  <dd>使用可</dd>
+
+                  <dt>食事指導</dt>
+                  <dd>有り</dd>
+                </dl>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <img src="../img/bg-wave-bottom.svg" alt="" />
     </section>
     <section class="faq">
-      <h3 class="h3_base">FAQ</h3>
-      <p>よくあるご質問</p>
+      <div class="container">
+        <div class="section-title">
+          <h3 class="h3_base">FAQ</h3>
+          <p>よくあるご質問</p>
+        </div>
+      </div>
     </section>
     <script src="main.js"></script>
   </body>
