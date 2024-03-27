@@ -9,27 +9,30 @@
       href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
     />
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
     <link
       rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
     <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
-    <header>
-      <a href="#">
-        <img src="../img/logo.svg" alt="engbody" class="logo-img" />
-      </a>
+    <header class="header">
+      <div class="default-header">
+        <a href="#">
+          <img src="../img/logo.svg" alt="engbody" class="logo-img" />
+        </a>
+      </div>
+      <div class="header-scrolled">
+        <a href="#">
+          <img src="../img/logo.svg" alt="engbody" class="logo-img" />
+        </a>
+        <div class="btn-common btn-header">
+          <a href="#">無料カウンセリングを受ける</a>
+        </div>
+      </div>
     </header>
     <main>
       <div class="mv_area">
@@ -100,7 +103,7 @@
     </section>
     <section class="our-trainer-section">
       <img src="../img/bg-wave-top.svg" alt="" />
-      <div class="pink-area">
+      <div class="container pink_section">
         <h3 class="h3_base">Our Trainer</h3>
         <p>トレーナー</p>
         <div class="tab center">
@@ -165,81 +168,117 @@
           <h3 class="h3_base">Studio</h3>
           <p class="text-mainColor">スタジオ</p>
         </div>
-        <ul class="studio-slider">
-          <li class="studio-slider-item">
-            <img src="../img/studio01.jpg" class="studio-img" />
-          </li>
-          <li class="studio-slider-item">
-            <img src="../img/studio02.jpg" class="studio-img" />
-          </li>
-          <li class="studio-slider-item">
-            <img src="../img/studio03.jpg" class="studio-img" />
-          </li>
-        </ul>
+        <div class="studio-swiper-container">
+          <ul class="swiper-wrapper studio-slider">
+            <li class="swiper-slide studio-slider-item">
+              <img src="../img/studio01.jpg" class="studio-img" />
+            </li>
+            <li class="swiper-slide studio-slider-item">
+              <img src="../img/studio02.jpg" class="studio-img" />
+            </li>
+            <li class="swiper-slide studio-slider-item">
+              <img src="../img/studio03.jpg" class="studio-img" />
+            </li>
+          </ul>
+          <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div> -->
+          <div class="swiper-pagination"></div>
+        </div>
       </div>
     </section>
     <section class="price">
       <img src="../img/bg-wave-top.svg" alt="" />
-      <div class="pink-area">
-        <div class="container">
-          <div class="section-title">
-            <h3 class="h3_base">Price</h3>
-            <p>料金</p>
-          </div>
-          <ul class="price-slider">
-            <li>
+      <div class="container pink_section">
+        <div class="section-title">
+          <h3 class="h3_base">Price</h3>
+          <p>料金</p>
+        </div>
+        <div class="price-swiper-container">
+          <ul class="swiper-wrapper price-slider">
+            <li class="swiper-slide">
               <div class="price-box">
-                <h4>週1コース</h4>
-                <dl>
-                  <dt>料金</dt>
-                  <dd>¥20,000 (入会金 ¥10,000)</dd>
-                  <dt>レンタル</dt>
-                  <dd>タオル、ウェア、プロテイン無料</dd>
-                  <dt>レストラン</dt>
-                  <dd>使用不可</dd>
-                  <dt>食事指導</dt>
-                  <dd>なし</dd>
+                <h4 class="h4_price_title">週1コース</h4>
+                <dl class="price_dl">
+                  <div class="price_and_faq_list">
+                    <dt>料金</dt>
+                    <dd>
+                      <span class="font-48">¥20,000</span><br />
+                      (入会金 ¥10,000)
+                    </dd>
+                  </div>
+                  <div class="price_and_faq_list">
+                    <dt>レンタル</dt>
+                    <dd>タオル、ウェア、プロテイン無料</dd>
+                  </div>
+                  <div class="price_and_faq_list">
+                    <dt>レストラン</dt>
+                    <dd>使用不可</dd>
+                  </div>
+                  <div class="price_and_faq_list">
+                    <dt>食事指導</dt>
+                    <dd>なし</dd>
+                  </div>
                 </dl>
               </div>
             </li>
-            <li>
+            <li class="swiper-slide">
               <div class="price-box">
-                <h4>週2コース</h4>
-                <dl>
-                  <dt>料金</dt>
-                  <dd>¥40,000 (入会金 ¥10,000)</dd>
-
-                  <dt>レンタル</dt>
-                  <dd>タオル、ウェア、プロテイン無料</dd>
-
-                  <dt>レストラン</dt>
-                  <dd>使用不可</dd>
-
-                  <dt>食事指導</dt>
-                  <dd>なし</dd>
+                <h4 class="h4_price_title">週2コース</h4>
+                <dl class="price_dl">
+                  <div class="price_and_faq_list">
+                    <dt>料金</dt>
+                    <dd>
+                      <span class="font-48">¥40,000</span> <br />(入会金
+                      ¥10,000)
+                    </dd>
+                  </div>
+                  <div class="price_and_faq_list">
+                    <dt>レンタル</dt>
+                    <dd>タオル、ウェア、プロテイン無料</dd>
+                  </div>
+                  <div class="price_and_faq_list">
+                    <dt>レストラン</dt>
+                    <dd>使用不可</dd>
+                  </div>
+                  <div class="price_and_faq_list">
+                    <dt>食事指導</dt>
+                    <dd>なし</dd>
+                  </div>
                 </dl>
               </div>
             </li>
-            <li>
+            <li class="swiper-slide">
               <div class="price-box">
-                <h4>無制限</h4>
-                <dl>
-                  <dt>料金</dt>
-                  <dd>¥70,000 (入会金 ¥10,000)</dd>
-
-                  <dt>レンタル</dt>
-                  <dd>タオル、ウェア、プロテイン無料</dd>
-
-                  <dt>レストラン</dt>
-                  <dd>使用可</dd>
-
-                  <dt>食事指導</dt>
-                  <dd>有り</dd>
+                <h4 class="h4_price_title">無制限</h4>
+                <dl class="price_dl">
+                  <div class="price_and_faq_list">
+                    <dt>料金</dt>
+                    <dd>
+                      <span class="font-48">¥70,000 </span><br />(入会金
+                      ¥10,000)
+                    </dd>
+                  </div>
+                  <div class="price_and_faq_list">
+                    <dt>レンタル</dt>
+                    <dd>タオル、ウェア、プロテイン無料</dd>
+                  </div>
+                  <div class="price_and_faq_list">
+                    <dt>レストラン</dt>
+                    <dd>使用可</dd>
+                  </div>
+                  <div class="price_and_faq_list">
+                    <dt>食事指導</dt>
+                    <dd>有り</dd>
+                  </div>
                 </dl>
               </div>
             </li>
           </ul>
+          <div class="swiper-scrollbar"></div>
         </div>
+        <!-- <div class="price-scroll">
+          <span class="material-icons">east</span>
+        </div> -->
       </div>
       <img src="../img/bg-wave-bottom.svg" alt="" />
     </section>
@@ -247,10 +286,65 @@
       <div class="container">
         <div class="section-title">
           <h3 class="h3_base">FAQ</h3>
-          <p>よくあるご質問</p>
+          <p class="text-mainColor">よくあるご質問</p>
+          <details class="price_and_faq_list">
+            <summary class="faq_summary">
+              <span class="QA_icon">Q</span>
+              見学や体験は可能ですか？
+              <span class="material-icons expand">expand_more</span>
+            </summary>
+            <span class="QA_icon">A</span>
+            無料カウンセリングの際に見学が可能です。フォームに見学・体験希望の欄がございますので内容をご確認しチェックを入れてください。
+          </details>
+          <details class="price_and_faq_list">
+            <summary class="faq_summary">
+              <span class="QA_icon">Q</span>
+              用意するものは何がありますか？
+              <span class="material-icons expand">expand_more</span>
+            </summary>
+            <span class="QA_icon">A</span>
+            シューズをご持参ください。ウェアとタオルは無料でレンタルが可能です。
+          </details>
+          <details class="price_and_faq_list">
+            <summary class="faq_summary">
+              <span class="QA_icon">Q</span>
+              シャワールームはありますか？
+              <span class="material-icons expand">expand_more</span>
+            </summary>
+            <span class="QA_icon">A</span>
+            5つのシャワールームがございます。ボディーソープ・シャンプー・リンスなどのアメニティやドライヤーもご用意しております。
+          </details>
         </div>
       </div>
     </section>
+    <section class="cta">
+      <picture>
+        <source
+          media="(max-width:768px)"
+          srcset="../img/sp_cta.jpg"
+          class="cta_img"
+        />
+        <img src="../img/pc_cta.jpg" class="cta_img" />
+      </picture>
+      <div class="pink_section cta_area">
+        <p class="cta_title">Come join us!!</p>
+        <div class="btn-common btn-block btn-color-change">
+          <a href="#">無料カウンセリングを受ける</a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <a href="#">
+        <img src="../img/logo-white.svg" alt="engbody" />
+      </a>
+    </footer>
+    <div class="arrow_up_container">
+      <a href="#">
+        <span class="material-icons arrow_up">keyboard_arrow_up</span>
+      </a>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

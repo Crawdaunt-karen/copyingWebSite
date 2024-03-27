@@ -21,7 +21,6 @@
   text-align: center;
   padding: 20px 10px;
 }
-
 /* ボタン絶対位置用 */
 .btn-absolute {
   position: absolute;
@@ -29,12 +28,24 @@
   top: 50%;
   right: 35%;
 }
-
 /* ボタンブロック要素中央寄せ用 */
 .btn-block {
   display: block;
   max-width: 300px;
   margin: 0 auto;
+}
+/* stickyヘッダー用のボタンクラス */
+.btn-header {
+  font-size: 12px;
+  padding: 12px 15px;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+/* ボタンの背景色と文字色を変える */
+.btn-color-change {
+  background-color: var(--white-color);
+  color: var(--main-color);
 }
 
 /* h3共通クラス */
@@ -51,9 +62,28 @@
   padding: 0 30px;
 }
 
+/* 背景ピンクで文字白のエリア */
+.pink_section {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  padding-bottom: 30px;
+}
+
 /* セクションタイトル用クラス */
 .section-title {
   margin-bottom: 30px;
+}
+
+/* header関連のクラス */
+.header-scrolled {
+  display: none; /* 初期状態で非表示 */
+}
+.header-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white; /* 背景色 */
+  z-index: 10;
 }
 
 /* mainのmvエリア */
@@ -90,6 +120,45 @@
   position: absolute;
   top: 20%;
   right: 35%;
+  color: transparent;
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  animation: slideInAndFadeInText 1s ease forwards,
+    fadeInBackground 1s ease 1s forwards;
+}
+.mv_main .text-mainColor {
+  opacity: 0;
+  animation: fadeInText 1s ease 1s forwards;
+}
+@keyframes slideInAndFadeInText {
+  0% {
+    background-image: linear-gradient(
+      to right,
+      var(--main-color) 50%,
+      transparent 50%
+    );
+    background-position: 0 0;
+  }
+  100% {
+    background-image: linear-gradient(
+      to right,
+      var(--main-color) 50%,
+      transparent 50%
+    );
+    background-position: -100% 0;
+  }
+}
+@keyframes fadeInBackground {
+  to {
+    background-color: var(--white-color);
+    color: #000;
+  }
+}
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+    color: var(--main-color);
+  }
 }
 .mv_sub {
   background-color: var(--white-color);
@@ -139,7 +208,23 @@
   margin: 0 20px;
   box-shadow: 0 0 20px;
   border-radius: 8px;
-  transform: translateY(-10%);
+  transform: translateY(0);
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeUpAnimation 1s ease forwards;
+  animation-delay: 0.5s;
+}
+@keyframes fadeUpAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-10%);
+    visibility: visible;
+  }
 }
 .h3_title {
   font-size: 18px;
@@ -156,11 +241,6 @@
 }
 
 /* our-trainerセクション */
-.pink-area {
-  background-color: var(--main-color);
-  color: var(--white-color);
-  padding: 0 30px;
-}
 .tabcontent {
   display: none;
   padding: 6px 12px;
@@ -195,6 +275,25 @@
   border-radius: 10px;
   background-color: var(--white-color);
 }
+
+.trainer-list-item {
+  visibility: hidden;
+  animation: fadeUpAnimation-trainer 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeUpAnimation-trainer {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+    visibility: visible;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+    visibility: visible;
+  }
+}
 .trainer-list-item:not(:last-child) {
   margin-bottom: 15px;
 }
@@ -208,6 +307,10 @@
 }
 
 /* studioセクション */
+.studio-slider {
+  margin-bottom: 10px;
+}
+
 .studio-slider-item {
   width: 315px;
 }
@@ -215,20 +318,101 @@
   max-width: 100%;
   height: auto;
 }
-.slick-prev::before,
-.slick-next::before {
-  color: var(--main-color);
-  font-size: 24px;
+.swiper-pagination {
+  position: static;
+  margin-bottom: 10px;
 }
-.slick-dots li.slick-active button:before {
-  color: var(--main-color);
+.swiper-pagination-bullet-active {
+  background: var(--main-color);
 }
 
 /* priceセクション */
 .price-box {
-  width: 100%;
+  max-width: 100%;
   background-color: var(--white-color);
   color: black;
   border-radius: 8px;
   padding: 40px 20px 0;
+}
+.h4_price_title {
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--main-color);
+  margin-bottom: 10px;
+  text-align: center;
+}
+.price_dl {
+  text-align: center;
+}
+/* 苦肉の策すぎて涙 */
+.swiper-scrollbar-horizontal {
+  position: static !important;
+}
+.font-48 {
+  font-size: 48px;
+}
+/* priceとfaq共通のクラス */
+.price_and_faq_list {
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+/* FAQセクション */
+.faq_summary {
+  list-style: none;
+  position: relative;
+  padding-bottom: 10px;
+}
+.expand {
+  color: var(--main-color);
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.QA_icon {
+  color: var(--main-color);
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/* ctaセクション */
+.cta_img {
+  max-width: 375px;
+  height: 180px;
+}
+.cta_area {
+  padding: 30px 20px;
+}
+.cta_title {
+  font-size: 26px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* フッター */
+.footer {
+  background-color: black;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* ページ上部に戻る用のボタン */
+.arrow_up_container {
+  color: var(--white-color);
+  background-color: var(--white-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 45%;
+  bottom: 2%;
+}
+.arrow_up {
+  font-size: 24px;
+  color: var(--main-color);
 }
